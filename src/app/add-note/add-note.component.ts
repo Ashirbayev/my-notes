@@ -10,8 +10,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class AddNoteComponent implements OnInit {
   newNoteTitle: string = '';
   newNoteText: string = '';
-  showAddNoteForm: boolean = false; 
-  currentId: number = 6; 
+  showAddNoteForm: boolean = false;
+  currentId: number = 6;
 
   constructor(private noteService: NoteService,
               private router: Router) { }
@@ -33,12 +33,9 @@ export class AddNoteComponent implements OnInit {
 
       this.currentId++;
 
-      
+
       this.router.navigate(['/']);
     }
-  }
-  toggleAddNoteForm(): void {
-    this.showAddNoteForm = !this.showAddNoteForm; 
   }
 
 }
