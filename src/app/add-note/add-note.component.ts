@@ -10,8 +10,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class AddNoteComponent implements OnInit {
   newNoteTitle: string = '';
   newNoteText: string = '';
-  showAddNoteForm: boolean = false; // Добавьте эту переменную
-  currentId: number = 3; // Инициализируйте текущий идентификатор значением 1
+  showAddNoteForm: boolean = false; 
+  currentId: number = 6; 
 
   constructor(private noteService: NoteService,
               private router: Router) { }
@@ -33,12 +33,12 @@ export class AddNoteComponent implements OnInit {
 
       this.currentId++;
 
-      // Перенаправьте пользователя на главную страницу
+      
       this.router.navigate(['/']);
     }
   }
   toggleAddNoteForm(): void {
-    this.showAddNoteForm = !this.showAddNoteForm; // Переключаем значение переменной
+    this.showAddNoteForm = !this.showAddNoteForm; 
   }
 
 }
