@@ -1,0 +1,10 @@
+<div class="add-note-form">
+  <h2>Добавить заметку</h2>
+  <label for="title">Заголовок:</label>
+  <input type="text" id="title" [(ngModel)]="newNoteTitle" required>
+
+  <label for="text">Текст:</label>
+  <textarea id="text" [(ngModel)]="newNoteText" required></textarea>
+
+  <button (click)="addNote()">Сохранить</button>
+</div>

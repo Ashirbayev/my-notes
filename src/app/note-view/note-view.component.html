@@ -1,0 +1,10 @@
+<div class="note-list-container">
+  <h2>Список заметок</h2>
+  <ul class="note-list">
+    <li *ngFor="let note of notes">
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.text.length > 100 ? note.text.slice(0, 100) + '...' : note.text }}</p>
+      <a [routerLink]="['/note-detail', note.id]">Перейти</a>
+    </li>
+  </ul>
+</div>
